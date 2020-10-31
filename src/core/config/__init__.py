@@ -4,9 +4,9 @@ from typing import Dict, Any
 
 
 class FlaskConfig:
-    APPLICATION_ROOT: str = "/api"
+    APPLICATION_ROOT: str = "/"
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "DEV")
-    SECRET_KEY: str = os.getenv("SECRET_KEY", Generator.random_string_generator(length=100, punctuation=False))
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "thisissecret")
 
 class Database:
     _database: str = os.getenv("DB", "postgresql")

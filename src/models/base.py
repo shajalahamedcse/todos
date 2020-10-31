@@ -1,4 +1,5 @@
-from src.core.database import db
+from datetime import datetime
+from core.database import db
 
 class BaseModel():
     """ Generalize __init__, __repr__ and to_json

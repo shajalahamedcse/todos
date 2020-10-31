@@ -7,7 +7,7 @@ from flask import make_response, jsonify
 
 class ResponseGenerator:
     @staticmethod
-    def generate_response(data:  Union[str, List[Any], Dict[str, Any], code: int, error: bool = False)):
+    def generate_response(data:  Union[str, List[Any], Dict[str, Any]], code: int, error: bool = False):
         if error:
                 response_data = {
                 "error": {
