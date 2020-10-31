@@ -1,7 +1,5 @@
-from flask import Flask
-from flask_cors import CORS
-from src.core.config import Configuration
+from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-CORS(app)
-app.config.from_object(Configuration)
+from src.core.flask_app import app
+
+db = SQLAlchemy(app)
